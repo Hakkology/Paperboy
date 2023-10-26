@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class house2 : MonoBehaviour
 {
-    public ObstacleManager obstacleManager;
     private string targetMaterialName = "map2";
     private MeshRenderer meshRender;
+    
     void  Awake() {
         meshRender = GetComponent<MeshRenderer>();
-        obstacleManager = ObstacleManager.Instance;
     }
     void Start(){
         HouseRandomColor(meshRender);
-        // HouseObstacleSpawner();
     }
 
     void HouseRandomColor(MeshRenderer meshRender){
@@ -29,14 +27,5 @@ public class house2 : MonoBehaviour
             }
         }
         meshRender.materials = materials;
-    }
-
-    void HouseObstacleSpawner(){
-        GameObject obstaclePrefab = ObstacleManager.Instance.GetRandomObstacle();
-        if (obstaclePrefab != null)
-        {
-            Vector3 spawnPosition = transform.position + new Vector3(0, obstaclePrefab.transform.localScale.y / 2, 0);
-            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
-        }
     }
 }

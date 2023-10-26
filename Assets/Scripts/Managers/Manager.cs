@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
     public EnvironmentManager environmentManager; 
     public BikerManager bikerManager;
     public TreeManager treeManager;
+    public ObstacleManager obstacleManager;
 
     [Header("Biker Manager Objects")]
     public Transform bikerTransform;
@@ -28,17 +29,23 @@ public class Manager : MonoBehaviour
     public List<GameObject> trees;
     public List<Transform> treeSpawnLocations;
 
+    [Header("Obstacle Manager Objects")]
+    public List<GameObject> obstaclePrefabs;
+    public List<Transform> obstacleSpawnPoints;
+
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
         leftFirstInterHouse, rightFirstInterHouse, leftLastInterHouse, rightLastInterHouse);
         treeManager = new TreeManager(trees, treeSpawnLocations);
+        obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
     }
 
     void Start(){
         treeManager.onStart();
         bikerManager.onStart();
         environmentManager.onStart();
+        obstacleManager.onStart();
     }
 
     // Update is called once per frame

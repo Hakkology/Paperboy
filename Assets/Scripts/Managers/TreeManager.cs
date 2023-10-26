@@ -56,7 +56,7 @@ public class TreeManager
         Vector3 firstLeftSpawnPosition = treeSpawnLocations[2].transform.position;
         int totalLeftSpawnDistance = 0;
 
-        for (int i = 1; i < 107; i++)
+        for (int i = 1; i < 30; i++)
         {
             int treeIndex = Random.Range(0, trees.Count);
             int spawnDistance = Random.Range(9,25);
@@ -72,7 +72,7 @@ public class TreeManager
         Vector3 firstRightSpawnPosition = treeSpawnLocations[3].transform.position;
         int totalRightSpawnDistance = 0;
 
-        for (int i = 1; i < 107; i++)
+        for (int i = 1; i < 30; i++)
         {
             int treeIndex = Random.Range(0, trees.Count);
             int spawnDistance = Random.Range(9,25);
@@ -90,7 +90,7 @@ public class TreeManager
         Vector3 firstLeftSpawnPosition = treeSpawnLocations[4].transform.position;
         int totalLeftSpawnDistance = 0;
 
-        for (int i = 1; i < 107; i++)
+        for (int i = 1; i < 30; i++)
         {
             int treeIndex = Random.Range(0, trees.Count);
             int spawnDistance = Random.Range(9,25);
@@ -106,7 +106,7 @@ public class TreeManager
         Vector3 firstRightSpawnPosition = treeSpawnLocations[5].transform.position;
         int totalRightSpawnDistance = 0;
 
-        for (int i = 1; i < 107; i++)
+        for (int i = 1; i < 30; i++)
         {
             int treeIndex = Random.Range(0, trees.Count);
             int spawnDistance = Random.Range(9,25);
