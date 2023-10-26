@@ -225,6 +225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 377042989}
     m_Modifications:
+    - target: {fileID: -5489737182602468518, guid: a5300953c6462ed479f4e71b69fb4c78, type: 3}
+      propertyPath: mailboxPrefab
+      value: 
+      objectReference: {fileID: 1498189224980116, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
     - target: {fileID: 100000, guid: a5300953c6462ed479f4e71b69fb4c78, type: 3}
       propertyPath: m_Name
       value: House6
