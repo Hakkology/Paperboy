@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour
 
     public EnvironmentManager environmentManager; 
     public BikerManager bikerManager;
+    public TreeManager treeManager;
 
     [Header("Biker Manager Objects")]
     public Transform bikerTransform;
@@ -23,13 +24,19 @@ public class Manager : MonoBehaviour
     public Transform leftLastInterHouse;
     public Transform rightLastInterHouse;
 
+    [Header("Tree Manager Objects")]
+    public List<GameObject> trees;
+    public List<Transform> treeSpawnLocations;
+
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
         leftFirstInterHouse, rightFirstInterHouse, leftLastInterHouse, rightLastInterHouse);
+        treeManager = new TreeManager(trees, treeSpawnLocations);
     }
 
     void Start(){
+        treeManager.onStart();
         bikerManager.onStart();
         environmentManager.onStart();
     }
