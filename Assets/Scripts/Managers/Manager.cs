@@ -14,13 +14,16 @@ public class Manager : MonoBehaviour
 
     [Header("Environment Manager Objects")]
     public GameObject roadLine;
+    public GameObject roadLine2;
     public List<GameObject> houseTypes;
     public Transform leftFirstHouse;
     public Transform rightFirstHouse;
+    public Transform leftFirstInterHouse;
+    public Transform rightFirstInterHouse;
 
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
-        environmentManager = new EnvironmentManager(roadLine, houseTypes, leftFirstHouse, rightFirstHouse);
+        environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, leftFirstInterHouse, rightFirstInterHouse);
     }
 
     void Start(){

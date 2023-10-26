@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class house1 : MonoBehaviour
 {
+    public ObstacleManager obstacleManager;
     private string targetMaterialName = "map4";
     private MeshRenderer meshRender;
-    // Start is called before the first frame update
-    void Start()
-    {
-        meshRender = GetComponent<MeshRenderer>();
 
+    void  Awake() {
+        meshRender = GetComponent<MeshRenderer>();
+        obstacleManager = ObstacleManager.Instance;
+    }
+    void Start(){
+        HouseRandomColor(meshRender);
+        HouseObstacleSpawner();
+    }
+
+    // Update is called once per frame
+    void Update(){
+        
+    }
+
+    void HouseRandomColor(MeshRenderer meshRender){
         Material[] materials = meshRender.materials;
 
         for (int i = 0; i < materials.Length; i++)
@@ -22,13 +34,15 @@ public class house1 : MonoBehaviour
                 break;
             }
         }
-
         meshRender.materials = materials;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void HouseObstacleSpawner(){
+        GameObject obstaclePrefab = ObstacleManager.Instance.GetRandomObstacle();
+        if (obstaclePrefab != null)
+        {
+            Vector3 spawnPosition = transform.position + new Vector3(0, obstaclePrefab.transform.localScale.y / 2, 0);
+            Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+        }
     }
 }
