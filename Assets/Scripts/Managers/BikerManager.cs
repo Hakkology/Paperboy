@@ -8,6 +8,7 @@ public class BikerManager
 
     public float speed = 2f;
     float min_speed = 2f;
+    [SerializeField]
     float max_speed = 4f;
     float rotationSpeed = 50;
     float max_rotation_value = 30;

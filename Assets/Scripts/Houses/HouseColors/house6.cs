@@ -14,7 +14,7 @@ public class house6 : MonoBehaviour
     }
     void Start(){
         HouseRandomColor(meshRender);
-        HouseObstacleSpawner();
+        // HouseObstacleSpawner();
     }
     void HouseRandomColor(MeshRenderer meshRender){
         Material[] materials = meshRender.materials;

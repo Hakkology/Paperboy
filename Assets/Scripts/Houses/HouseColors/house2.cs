@@ -13,7 +13,7 @@ public class house2 : MonoBehaviour
     }
     void Start(){
         HouseRandomColor(meshRender);
-        HouseObstacleSpawner();
+        // HouseObstacleSpawner();
     }
 
     void HouseRandomColor(MeshRenderer meshRender){

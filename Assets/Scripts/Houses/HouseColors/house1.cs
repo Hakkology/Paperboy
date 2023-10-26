@@ -14,7 +14,7 @@ public class house1 : MonoBehaviour
     }
     void Start(){
         HouseRandomColor(meshRender);
-        HouseObstacleSpawner();
+        // HouseObstacleSpawner();
     }
 
     // Update is called once per frame

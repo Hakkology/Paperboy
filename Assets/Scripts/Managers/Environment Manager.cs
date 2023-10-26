@@ -11,8 +11,10 @@ public class EnvironmentManager
     public Transform firstRightHouse;
     public Transform firstLeftIntersectionHouse;
     public Transform firstRightIntersectionHouse;
+    public Transform lastLeftIntersectionHouse;
+    public Transform lastRightIntersectionHouse;
 
-    public EnvironmentManager(GameObject lines, GameObject lines2, List<GameObject> housePre, Transform firstLHouse, Transform firstRHouse, Transform firstILHouse, Transform firstIRHouse){
+    public EnvironmentManager(GameObject lines, GameObject lines2, List<GameObject> housePre, Transform firstLHouse, Transform firstRHouse, Transform firstILHouse, Transform firstIRHouse, Transform lastILHouse, Transform lastIRHouse){
         roadLine = lines;
         roadLine2 = lines2;
         housePrefabs = housePre;
@@ -20,6 +22,8 @@ public class EnvironmentManager
         firstRightHouse = firstRHouse;
         firstLeftIntersectionHouse = firstILHouse;
         firstRightIntersectionHouse = firstIRHouse;
+        lastLeftIntersectionHouse = lastILHouse;
+        lastRightIntersectionHouse = lastIRHouse;
     }
     
     public void onStart()
@@ -48,14 +52,12 @@ public class EnvironmentManager
 
         Vector3 secondSpawnPosition = roadLine2.transform.position;
 
-        for (int i = 1; i < 46; i++)
+        for (int i = 1; i < 100; i++)
         {
             GameObject newLine = UnityEngine.Object.Instantiate(roadLine2, new Vector3(secondSpawnPosition.x + 3 * i, secondSpawnPosition.y, secondSpawnPosition.z), Quaternion.Euler(0,90,0));
             newLine.transform.SetParent(roadLine2.transform.parent);
         }
     }
-
-    
 
     void GenerateRightHouses()
     {
@@ -105,6 +107,20 @@ public class EnvironmentManager
             newHouse.transform.rotation = Quaternion.Euler(0, 180, 0);
             newHouse.transform.SetParent(firstLeftIntersectionHouse.parent);
         }
+
+        Vector3 lastSpawnPosition = lastLeftIntersectionHouse.transform.position;
+        for (int i = 1; i < 6; i++)
+        {
+            int j = Random.Range(0,2);
+            GameObject newHouse = UnityEngine.Object.Instantiate(housePrefabs[j]);
+            
+            float houseHeight = newHouse.GetComponent<Renderer>().bounds.size.y;
+            Vector3 position = new Vector3(lastSpawnPosition.x - 20 * i, houseHeight / 2, lastSpawnPosition.z);
+            
+            newHouse.transform.position = position;
+            newHouse.transform.rotation = Quaternion.Euler(0, 180, 0);
+            newHouse.transform.SetParent(lastLeftIntersectionHouse.parent);
+        }
     }
 
     void GenerateIntersectionRightHouses(){
@@ -120,6 +136,20 @@ public class EnvironmentManager
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 0, 0);
             newHouse.transform.SetParent(firstRightIntersectionHouse.parent);
+        }
+
+        Vector3 lastSpawnPosition = lastRightIntersectionHouse.transform.position;
+        for (int i = 1; i < 6; i++)
+        {
+            int j = Random.Range(0,2);
+            GameObject newHouse = UnityEngine.Object.Instantiate(housePrefabs[j]);
+            
+            float houseHeight = newHouse.GetComponent<Renderer>().bounds.size.y;
+            Vector3 position = new Vector3(lastSpawnPosition.x - 20 * i, houseHeight / 2, lastSpawnPosition.z);
+            
+            newHouse.transform.position = position;
+            newHouse.transform.rotation = Quaternion.Euler(0, 0, 0);
+            newHouse.transform.SetParent(lastRightIntersectionHouse.parent);
         }
     }
 

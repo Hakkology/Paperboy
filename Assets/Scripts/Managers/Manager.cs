@@ -20,10 +20,13 @@ public class Manager : MonoBehaviour
     public Transform rightFirstHouse;
     public Transform leftFirstInterHouse;
     public Transform rightFirstInterHouse;
+    public Transform leftLastInterHouse;
+    public Transform rightLastInterHouse;
 
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
-        environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, leftFirstInterHouse, rightFirstInterHouse);
+        environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
+        leftFirstInterHouse, rightFirstInterHouse, leftLastInterHouse, rightLastInterHouse);
     }
 
     void Start(){
