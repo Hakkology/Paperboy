@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8573707047165917175}
   - component: {fileID: 4707447670327310418}
   - component: {fileID: 7399627488303352984}
+  - component: {fileID: 52728829443127871}
   m_Layer: 0
   m_Name: Plane.014
   m_TagString: Untagged
@@ -25,6 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9056806534228880717}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,7 +37,6 @@ Transform:
   - {fileID: 5038632897989983510}
   - {fileID: 1267121068497982118}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4707447670327310418
 MeshFilter:
@@ -90,11 +91,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &52728829443127871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056806534228880717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88188611928c19d43920feaa242ff988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheels:
+  - {fileID: 3039449313847403552}
+  - {fileID: 5560991917364049279}
+  - {fileID: 5667500032018507692}
+  - {fileID: 1936098454884059164}
 --- !u!1001 &1594008841417209165
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573707047165917175}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
@@ -158,10 +177,18 @@ PrefabInstance:
       value: Torus.027 (19)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
 --- !u!4 &1267121068497982118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+  m_PrefabInstance: {fileID: 1594008841417209165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1936098454884059164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 1594008841417209165}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2805499429696625009
@@ -169,6 +196,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573707047165917175}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
@@ -232,10 +260,18 @@ PrefabInstance:
       value: Torus.027 (22)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
 --- !u!4 &2406500689579458202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+  m_PrefabInstance: {fileID: 2805499429696625009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3039449313847403552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 2805499429696625009}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4750723106098661422
@@ -243,6 +279,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573707047165917175}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
@@ -306,10 +343,18 @@ PrefabInstance:
       value: Torus.027 (21)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
 --- !u!4 &5073107084849786821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+  m_PrefabInstance: {fileID: 4750723106098661422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5560991917364049279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 4750723106098661422}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4784626629210495741
@@ -317,6 +362,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573707047165917175}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
@@ -380,9 +426,17 @@ PrefabInstance:
       value: Torus.027 (20)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
 --- !u!4 &5038632897989983510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+  m_PrefabInstance: {fileID: 4784626629210495741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5667500032018507692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 4784626629210495741}
   m_PrefabAsset: {fileID: 0}

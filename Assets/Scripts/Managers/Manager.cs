@@ -38,6 +38,11 @@ public class Manager : MonoBehaviour
     public List<GameObject> bikeWheels;
     public List<GameObject> bikePedals;
 
+    [Header("Car Spawning Mechanics")]
+    public List<GameObject> carPrefabs; 
+    public List<CarPath> carPathWaypoints;
+    private CarSpawner carSpawner;
+
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
@@ -45,6 +50,7 @@ public class Manager : MonoBehaviour
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
         animationManager = new AnimationManager(bikeWheels, bikePedals);
+        carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);
     }
 
     void Start(){
@@ -53,6 +59,9 @@ public class Manager : MonoBehaviour
         environmentManager.onStart();
         obstacleManager.onStart();
         animationManager.onStart();
+        carSpawner.onStart();
+
+        StartCoroutine(carSpawner.SpawnCarsCoroutine());
     }
 
     void Update(){
