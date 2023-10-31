@@ -24,12 +24,13 @@ public class Manager : MonoBehaviour
     public GameObject roadLine;
     public GameObject roadLine2;
     public List<GameObject> houseTypes;
-    public Transform leftFirstHouse;
-    public Transform rightFirstHouse;
-    public Transform leftFirstInterHouse;
-    public Transform rightFirstInterHouse;
-    public Transform leftLastInterHouse;
-    public Transform rightLastInterHouse;
+    public List<Transform> houseLocations;
+    // public Transform leftFirstHouse;
+    // public Transform rightFirstHouse;
+    // public Transform leftFirstInterHouse;
+    // public Transform rightFirstInterHouse;
+    // public Transform leftLastInterHouse;
+    // public Transform rightLastInterHouse;
 
     [Header("Tree Manager Objects")]
     public List<GameObject> trees;
@@ -52,8 +53,7 @@ public class Manager : MonoBehaviour
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         animationManager = new AnimationManager(bikeWheels, bikePedals);
         bikerPedaling = new BikerHandler(leftFootTransform, rightFootTransform, leftPedalTransform, rightPedalTransform);
-        environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
-        leftFirstInterHouse, rightFirstInterHouse, leftLastInterHouse, rightLastInterHouse);
+        environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, houseLocations);
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
         carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);

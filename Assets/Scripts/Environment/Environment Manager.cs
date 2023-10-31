@@ -7,23 +7,19 @@ public class EnvironmentManager
     public GameObject roadLine;
     public GameObject roadLine2;
     public List<GameObject> housePrefabs;
-    public Transform firstLeftHouse;
-    public Transform firstRightHouse;
-    public Transform firstLeftIntersectionHouse;
-    public Transform firstRightIntersectionHouse;
-    public Transform lastLeftIntersectionHouse;
-    public Transform lastRightIntersectionHouse;
+    public List<Transform> housePrefabLocations;
+    // public Transform firstLeftHouse;
+    // public Transform firstRightHouse;
+    // public Transform firstLeftIntersectionHouse;
+    // public Transform firstRightIntersectionHouse;
+    // public Transform lastLeftIntersectionHouse;
+    // public Transform lastRightIntersectionHouse;
 
-    public EnvironmentManager(GameObject lines, GameObject lines2, List<GameObject> housePre, Transform firstLHouse, Transform firstRHouse, Transform firstILHouse, Transform firstIRHouse, Transform lastILHouse, Transform lastIRHouse){
+    public EnvironmentManager(GameObject lines, GameObject lines2, List<GameObject> housePre, List<Transform> housePreLocations){
         roadLine = lines;
         roadLine2 = lines2;
         housePrefabs = housePre;
-        firstLeftHouse = firstLHouse;
-        firstRightHouse = firstRHouse;
-        firstLeftIntersectionHouse = firstILHouse;
-        firstRightIntersectionHouse = firstIRHouse;
-        lastLeftIntersectionHouse = lastILHouse;
-        lastRightIntersectionHouse = lastIRHouse;
+        housePrefabLocations = housePreLocations;
     }
     
     public void onStart()
@@ -61,7 +57,7 @@ public class EnvironmentManager
 
     void GenerateRightHouses()
     {
-        Vector3 firstSpawnPosition = firstLeftHouse.transform.position;
+        Vector3 firstSpawnPosition = housePrefabLocations[0].transform.position;
         for (int i = 1; i < 14; i++)
         {
             int j = Random.Range(0,2);
@@ -72,13 +68,13 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 90, 0);
-            newHouse.transform.SetParent(firstLeftHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[0].parent);
         }
     }
 
     void GenerateLeftHouses()
     {
-        Vector3 firstSpawnPosition = firstRightHouse.transform.position;
+        Vector3 firstSpawnPosition = housePrefabLocations[1].transform.position;
         for (int i = 1; i < 14; i++)
         {
             int j = Random.Range(0,2);
@@ -89,12 +85,12 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, -90, 0);
-            newHouse.transform.SetParent(firstRightHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[1].parent);
         }
     }
 
     void GenerateIntersectionLeftHouses(){
-        Vector3 firstSpawnPosition = firstLeftIntersectionHouse.transform.position;
+        Vector3 firstSpawnPosition = housePrefabLocations[2].transform.position;
         for (int i = 1; i < 6; i++)
         {
             int j = Random.Range(0,2);
@@ -105,10 +101,10 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 180, 0);
-            newHouse.transform.SetParent(firstLeftIntersectionHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[2].parent);
         }
 
-        Vector3 lastSpawnPosition = lastLeftIntersectionHouse.transform.position;
+        Vector3 lastSpawnPosition = housePrefabLocations[3].transform.position;
         for (int i = 1; i < 6; i++)
         {
             int j = Random.Range(0,2);
@@ -119,12 +115,12 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 180, 0);
-            newHouse.transform.SetParent(lastLeftIntersectionHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[3].parent);
         }
     }
 
     void GenerateIntersectionRightHouses(){
-        Vector3 firstSpawnPosition = firstRightIntersectionHouse.transform.position;
+        Vector3 firstSpawnPosition = housePrefabLocations[4].transform.position;
         for (int i = 1; i < 6; i++)
         {
             int j = Random.Range(0,2);
@@ -135,10 +131,10 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 0, 0);
-            newHouse.transform.SetParent(firstRightIntersectionHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[4].parent);
         }
 
-        Vector3 lastSpawnPosition = lastRightIntersectionHouse.transform.position;
+        Vector3 lastSpawnPosition = housePrefabLocations[5].transform.position;
         for (int i = 1; i < 6; i++)
         {
             int j = Random.Range(0,2);
@@ -149,7 +145,7 @@ public class EnvironmentManager
             
             newHouse.transform.position = position;
             newHouse.transform.rotation = Quaternion.Euler(0, 0, 0);
-            newHouse.transform.SetParent(lastRightIntersectionHouse.parent);
+            newHouse.transform.SetParent(housePrefabLocations[5].parent);
         }
     }
 

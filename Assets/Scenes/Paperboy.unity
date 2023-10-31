@@ -380,7 +380,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Actual First House
+      value: FirstLeftHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -547,7 +547,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Opposing First House
+      value: FirstRightRightHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2951,7 +2951,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Actual First House
+      value: FirstLeftLeftHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3726,7 +3726,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Opposing First House
+      value: FirstRightHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4027,7 +4027,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Opposing First House
+      value: FirstLeftRightHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4216,7 +4216,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_Name
-      value: Actual First House
+      value: FirstRightLeftHouse
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4903,12 +4903,13 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0021dc7ae6ca2cb4bb44c107245b122f, type: 3}
   - {fileID: 100000, guid: 148c959f2024f81498bfe1a565c3a0cb, type: 3}
   - {fileID: 100000, guid: a5300953c6462ed479f4e71b69fb4c78, type: 3}
-  leftFirstHouse: {fileID: 1340774480}
-  rightFirstHouse: {fileID: 749288937}
-  leftFirstInterHouse: {fileID: 606969673}
-  rightFirstInterHouse: {fileID: 1435972147}
-  leftLastInterHouse: {fileID: 273715595}
-  rightLastInterHouse: {fileID: 326039201}
+  houseLocations:
+  - {fileID: 1340774480}
+  - {fileID: 749288937}
+  - {fileID: 606969673}
+  - {fileID: 273715595}
+  - {fileID: 1435972147}
+  - {fileID: 326039201}
   trees:
   - {fileID: 192044, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   - {fileID: 191266, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
