@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-
     public EnvironmentManager environmentManager; 
     public BikerManager bikerManager;
+    public BikerHandler bikerPedaling;
     public TreeManager treeManager;
     public ObstacleManager obstacleManager;
     public AnimationManager animationManager;
@@ -14,6 +14,11 @@ public class Manager : MonoBehaviour
     [Header("Biker Manager Objects")]
     public Transform bikerTransform;
     public Transform cameraTransform;
+    [Header ("Biker Pedaling Objects")]
+    public Transform leftFootTransform;
+    public Transform rightFootTransform;
+    public Transform leftPedalTransform;
+    public Transform rightPedalTransform;
 
     [Header("Environment Manager Objects")]
     public GameObject roadLine;
@@ -45,11 +50,12 @@ public class Manager : MonoBehaviour
 
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
+        animationManager = new AnimationManager(bikeWheels, bikePedals);
+        bikerPedaling = new BikerHandler(leftFootTransform, rightFootTransform, leftPedalTransform, rightPedalTransform);
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, leftFirstHouse, rightFirstHouse, 
         leftFirstInterHouse, rightFirstInterHouse, leftLastInterHouse, rightLastInterHouse);
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
-        animationManager = new AnimationManager(bikeWheels, bikePedals);
         carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);
     }
 
@@ -60,7 +66,8 @@ public class Manager : MonoBehaviour
         obstacleManager.onStart();
         animationManager.onStart();
         carSpawner.onStart();
-
+        bikerPedaling.onUpdate();
+        
         StartCoroutine(carSpawner.SpawnCarsCoroutine());
     }
 
