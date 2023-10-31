@@ -54,10 +54,10 @@ public class CarMover
         {
             if (_currentTarget.Equals(_path.rotationPoint))
             {
-                _transform.rotation = Quaternion.Euler(_currentTarget.rotation); // set rotation instantly
+                _transform.rotation = Quaternion.Euler(_currentTarget.rotation); 
                 _isRotating = false;
                 _speed = 10f;  
-                _currentTarget = _path.endPoint; // move to the next point immediately
+                _currentTarget = _path.endPoint; 
             }
             else if (_currentTarget.Equals(_path.endPoint))
             {

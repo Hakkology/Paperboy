@@ -22,7 +22,7 @@ public class CarHandler : MonoBehaviour
     //         }
     //     }
         
-    //     // Ensure we found the wheels
+
     //     if (wheels.Count == 0)
     //     {
     //         Debug.LogError("No wheels found for the car!");
