@@ -4,6 +4,7 @@ public class CarHandler : MonoBehaviour
 {
     private CarMover carMover;
     // private CarWheelHandler carWheelHandler;
+    // [SerializeField]
     // private List<GameObject> wheels;
 
     public void Initialize(CarPath path)
@@ -12,22 +13,6 @@ public class CarHandler : MonoBehaviour
         carMover.OnStart();
         // carWheelHandler = new CarWheelHandler(carMover, wheels);
     }
-
-    // private void Awake() {
-    //     foreach (Transform child in transform)
-    //     {
-    //         if (child.gameObject.CompareTag("Wheel"))
-    //         {
-    //             wheels.Add(child.gameObject);
-    //         }
-    //     }
-        
-
-    //     if (wheels.Count == 0)
-    //     {
-    //         Debug.LogError("No wheels found for the car!");
-    //     }
-    // }
 
     private void Update()
     {

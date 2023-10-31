@@ -4,7 +4,7 @@ public class CarWheelHandler
 {
     private List<GameObject> wheels;
     private CarMover carMover;
-    private Vector3 rotationAxis = new Vector3(0, 0, 1);
+    private Vector3 rotationAxis = new Vector3(1, 0, 0);
     private float rotationMultiplier = 50.0f; 
 
     public CarWheelHandler(CarMover carMover, List<GameObject> wheels)
@@ -22,32 +22,10 @@ public class CarWheelHandler
     {
         if (carMover != null)
         {
-            if (wheels == null)
-            {
-                Debug.LogError("Wheels array is null!");
-                return;
-            }
-
-            Debug.Log($"Wheels array length: {wheels.Count}");
-
             float rotationAmount = carMover._speed * rotationMultiplier;
-
-            for (int i = 0; i < wheels.Count; i++)
-            {
-                if (wheels[i] != null)
-                {
-                    wheels[i].transform.Rotate(rotationAxis, rotationAmount);
-                }
-                else
-                {
-                    Debug.LogError($"A wheel at index {i} in the wheels array is null!");
-                }
+            for (int i = 0; i < wheels.Count; i++){
+                wheels[i].transform.Rotate(rotationAxis, rotationAmount);
             }
-        }
-        else
-        {
-            Debug.LogError("carMover is null!");
         }
     }
-
 }
