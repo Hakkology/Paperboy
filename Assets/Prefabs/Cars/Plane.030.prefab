@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 9189410908062713886}
   - component: {fileID: 6369127543311531220}
   - component: {fileID: -3810283445915374659}
-  m_Layer: 0
+  - component: {fileID: -997904300461294509}
+  m_Layer: 6
   m_Name: Plane.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,11 +107,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88188611928c19d43920feaa242ff988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheels:
-  - {fileID: 2038505493134716542}
-  - {fileID: 6468241576168143088}
-  - {fileID: 5525251546906572835}
-  - {fileID: 6838220188309415559}
+--- !u!65 &-997904300461294509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4855816844429417729}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7543132, y: 1.4830269, z: 4.9987082}
+  m_Center: {x: -0.06802368, y: 0.104824245, z: -0.30362964}
 --- !u!1001 &1192134641565766447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torus.027 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -187,11 +208,6 @@ PrefabInstance:
 --- !u!4 &1657862730273158340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
-  m_PrefabInstance: {fileID: 1192134641565766447}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2038505493134716542 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 1192134641565766447}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4642308327257539954
@@ -262,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torus.027 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -270,11 +290,6 @@ PrefabInstance:
 --- !u!4 &5180955615160918681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
-  m_PrefabInstance: {fileID: 4642308327257539954}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5525251546906572835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 4642308327257539954}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5919793513303333846
@@ -345,6 +360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torus.027 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353,11 +372,6 @@ PrefabInstance:
 --- !u!4 &6173851985014832189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
-  m_PrefabInstance: {fileID: 5919793513303333846}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6838220188309415559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 5919793513303333846}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6125641651867551137
@@ -428,6 +442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torus.027 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -436,10 +454,5 @@ PrefabInstance:
 --- !u!4 &5947038345855656522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
-  m_PrefabInstance: {fileID: 6125641651867551137}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6468241576168143088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: befd9dedc614d644fbd99862495aaf53, type: 3}
   m_PrefabInstance: {fileID: 6125641651867551137}
   m_PrefabAsset: {fileID: 0}

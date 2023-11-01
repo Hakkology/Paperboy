@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 4597078948584197556}
   - component: {fileID: 6081108919004544678}
   - component: {fileID: 4659505328947551596}
-  - component: {fileID: -3401381779177849003}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PickAxeV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,17 +128,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7163034, y: 1, z: 0.08503308}
-  m_Center: {x: -0.010856211, y: 0.5, z: -0.00018924847}
---- !u!114 &-3401381779177849003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2651747729594002529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0fd5f29003084190aa7d846f21f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.25, y: 0.5, z: 0.25}
+  m_Center: {x: 0, y: 0.25, z: 0}

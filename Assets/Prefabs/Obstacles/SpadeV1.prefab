@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 8012819011686485927}
   - component: {fileID: 3738959530906896855}
   - component: {fileID: 5648103461834104770}
-  - component: {fileID: 5217986786934842194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpadeV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,17 +127,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20000008, y: 1, z: 0.06902762}
-  m_Center: {x: -0.0000001527369, y: 0.5, z: 0.0072226822}
---- !u!114 &5217986786934842194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8373242977027255922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0fd5f29003084190aa7d846f21f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.25, y: 0.5, z: 0.25}
+  m_Center: {x: 0, y: 0.25, z: 0}

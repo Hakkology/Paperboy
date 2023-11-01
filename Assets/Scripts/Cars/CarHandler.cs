@@ -32,9 +32,5 @@ public class CarHandler : MonoBehaviour
         {
             return;
         }
-        if (other.gameObject.layer == 7)
-        {
-            Destroy(other.gameObject);
-        }
     }
 }

@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 4146297521102734846}
   - component: {fileID: 2510132264159978935}
   - component: {fileID: -3968950195167054426}
-  - component: {fileID: -5808419340318284610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AxeV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,17 +128,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28226453, y: 1, z: 0.04967539}
-  m_Center: {x: -0.066912964, y: 0.5, z: -0.0000040642917}
---- !u!114 &-5808419340318284610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2488915889958085675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0fd5f29003084190aa7d846f21f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.25, y: 0.5, z: 0.25}
+  m_Center: {x: 0, y: 0.25, z: 0}

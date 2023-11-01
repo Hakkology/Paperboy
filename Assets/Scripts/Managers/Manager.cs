@@ -6,7 +6,7 @@ public class Manager : MonoBehaviour
 {
     public EnvironmentManager environmentManager; 
     public BikerManager bikerManager;
-    public BikerHandler bikerPedaling;
+    //public BikerHandler bikerPedaling;
     public TreeManager treeManager;
     public ObstacleManager obstacleManager;
     public AnimationManager animationManager;
@@ -52,7 +52,7 @@ public class Manager : MonoBehaviour
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         animationManager = new AnimationManager(bikeWheels, bikePedals);
-        bikerPedaling = new BikerHandler(leftFootTransform, rightFootTransform, leftPedalTransform, rightPedalTransform);
+        //bikerPedaling = new BikerHandler(leftFootTransform, rightFootTransform, leftPedalTransform, rightPedalTransform);
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, houseLocations);
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
@@ -66,7 +66,7 @@ public class Manager : MonoBehaviour
         obstacleManager.onStart();
         animationManager.onStart();
         carSpawner.onStart();
-        bikerPedaling.onUpdate();
+        //(bikerPedaling.onUpdate();
         
         StartCoroutine(carSpawner.SpawnCarsCoroutine());
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: -5489737182602468518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: House6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6091309167222083890}
   - component: {fileID: 4544967058431563241}
   - component: {fileID: 601327630528043955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1823503698454118603}
   - component: {fileID: 1739444007550629162}
   - component: {fileID: 760838083093577206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 1389834450590840105}
   - component: {fileID: 2423486057734615069}
   - component: {fileID: 7713875096733542578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,6 +438,10 @@ PrefabInstance:
     - target: {fileID: 1498189224980116, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
       propertyPath: m_Name
       value: Mailbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498189224980116, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4821364316237510, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
       propertyPath: m_LocalScale.x

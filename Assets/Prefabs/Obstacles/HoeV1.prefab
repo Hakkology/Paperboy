@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 3047817837922597605}
   - component: {fileID: 8528560768081515166}
   - component: {fileID: -2903047315817417906}
-  - component: {fileID: 6421252968552766758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HoeV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,17 +127,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16336055, y: 1, z: 0.2675146}
-  m_Center: {x: -0.00000017136335, y: 0.5, z: 0.11331475}
---- !u!114 &6421252968552766758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3552489482485111600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c0fd5f29003084190aa7d846f21f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.25, y: 0.5, z: 0.25}
+  m_Center: {x: 0, y: 0.25, z: 0}
