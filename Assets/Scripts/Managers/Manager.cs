@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public TreeManager treeManager;
     public ObstacleManager obstacleManager;
     public AnimationManager animationManager;
+    public NewspaperManager newspaperManager;
 
     [Header("Biker Manager Objects")]
     public Transform bikerTransform;
@@ -49,6 +50,10 @@ public class Manager : MonoBehaviour
     public List<CarPath> carPathWaypoints;
     private CarSpawner carSpawner;
 
+    [Header("Newspaper Mechanics")]
+    public GameObject newspaperPrefab; 
+    public Transform newspaperThrowPoint;
+
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
         animationManager = new AnimationManager(bikeWheels, bikePedals);
@@ -57,6 +62,7 @@ public class Manager : MonoBehaviour
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
         carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);
+        newspaperManager = new NewspaperManager(newspaperPrefab, newspaperThrowPoint, bikerManager.speed);
     }
 
     void Start(){
@@ -66,6 +72,7 @@ public class Manager : MonoBehaviour
         obstacleManager.onStart();
         animationManager.onStart();
         carSpawner.onStart();
+        //newspaperManager.onStart();
         //(bikerPedaling.onUpdate();
         
         StartCoroutine(carSpawner.SpawnCarsCoroutine());
@@ -75,5 +82,6 @@ public class Manager : MonoBehaviour
         bikerManager.onUpdate();
         environmentManager.onUpdate();
         animationManager.onUpdate();
+        newspaperManager.OnUpdate();
     }
 }

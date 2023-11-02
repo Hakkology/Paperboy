@@ -29,6 +29,7 @@ public class CarSpawner
             CarPath selectedPath = carPaths[Random.Range(0, carPaths.Count)];
 
             GameObject instantiatedCar = GameObject.Instantiate(carPrefab, selectedPath.spawnPoint.point.position, Quaternion.Euler(selectedPath.spawnPoint.rotation));
+            instantiatedCar.transform.SetParent(carPrefab.transform.parent);
             CarHandler carMoverHandler = instantiatedCar.AddComponent<CarHandler>();
             carMoverHandler.Initialize(selectedPath);
         }
@@ -39,6 +40,7 @@ public class CarSpawner
         carPrefab.gameObject.SetActive(true);
         CarPath selectedPath = carPaths[2];
         GameObject instantiatedCar = GameObject.Instantiate(carPrefab, selectedPath.spawnPoint.point.position, Quaternion.Euler(selectedPath.spawnPoint.rotation));
+        instantiatedCar.transform.SetParent(carPrefab.transform.parent);
         CarHandler carMoverHandler = instantiatedCar.AddComponent<CarHandler>();
         carMoverHandler.Initialize(selectedPath);
 
@@ -46,6 +48,7 @@ public class CarSpawner
         carPrefab2.gameObject.SetActive(true);
         CarPath selectedPath2 = carPaths[3];
         GameObject instantiatedCar2 = GameObject.Instantiate(carPrefab2, selectedPath2.spawnPoint.point.position, Quaternion.Euler(selectedPath2.spawnPoint.rotation));
+        instantiatedCar2.transform.SetParent(carPrefab.transform.parent);
         CarHandler carMoverHandler2 = instantiatedCar2.AddComponent<CarHandler>();
         carMoverHandler2.Initialize(selectedPath);
     }
