@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a09ab6bcbbf8d4d9108cdae11a293e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwVectorX: -25
+  throwVectorX: -30
 --- !u!54 &3955084839376622751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

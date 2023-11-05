@@ -9,22 +9,34 @@ public class NewspaperHandler : MonoBehaviour
     public void Initialize(float speed)
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = true;
         rb.velocity = new Vector3(throwVectorX, speed, 0); 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Destroy(this.gameObject, 1f); 
 
-        if (collision.gameObject.layer == 11) // If it's a window
+    private void OnTriggerEnter(Collider other) {
+
+        Destroy(this.gameObject, 2f); 
+
+        if (other.gameObject.layer == 10) // If it's a window
         {
-            rb.velocity = new Vector3(-1f, 0, 0);
+            rb.velocity = new Vector3(0, 0, 0);
         }
         else // If it's any other object
         {
-            Vector3 reflection = Vector3.Reflect(rb.velocity, collision.contacts[0].normal);
-            rb.velocity = new Vector3(Mathf.Abs(reflection.x), reflection.y, 0);
+            ReflectVelocity();
         }
+    }
+
+    private void ReflectVelocity()
+    {
+        Vector3 presumedNormal = Vector3.right;
+
+        if(rb.velocity.x > 0)
+        {
+            presumedNormal = Vector3.left;
+        }
+
+        Vector3 reflection = Vector3.Reflect(rb.velocity, presumedNormal);
+        rb.velocity = new Vector3(Mathf.Abs(reflection.x)/2, reflection.y/2, 0);
     }
 }

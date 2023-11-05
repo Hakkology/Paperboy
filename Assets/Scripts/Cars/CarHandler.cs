@@ -26,11 +26,4 @@ public class CarHandler : MonoBehaviour
         //     carWheelHandler.OnUpdate();
         // }
     }
-
-    private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.layer == 6)
-        {
-            return;
-        }
-    }
 }

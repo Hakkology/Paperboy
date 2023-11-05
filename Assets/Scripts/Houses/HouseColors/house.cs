@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class house1 : MonoBehaviour
+public class house : MonoBehaviour
 {
-    private string targetMaterialName = "map4";
+    public string targetMaterialName = "";
     private MeshRenderer meshRender;
 
     void  Awake() {
         meshRender = GetComponent<MeshRenderer>();
+        if (this.gameObject.name == "House1")
+        {
+            targetMaterialName = "map4";
+        }
+        else
+        {
+            targetMaterialName = "map2";
+        }
     }
     void Start(){
         HouseRandomColor(meshRender);
@@ -28,4 +36,6 @@ public class house1 : MonoBehaviour
         }
         meshRender.materials = materials;
     }
+
+    
 }
