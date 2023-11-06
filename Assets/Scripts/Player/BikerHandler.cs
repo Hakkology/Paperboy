@@ -28,18 +28,11 @@ public class BikerHandler : MonoBehaviour
     //     foot.position = pedal.position + footOffset;
     // }
 
-    private void OnCollisionEnter(Collision other) {
-        
-        if (other.gameObject.layer == 6)
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.layer == 7 || other.gameObject.layer == 8 || other.gameObject.layer == 9)
+        if (other.gameObject.layer == 6 || other.gameObject.layer == 7 || other.gameObject.layer == 8 || other.gameObject.layer == 9)
         {
             Destroy(gameObject);
+            UIManager.Instance.LoseLife();
         }
     }
 }

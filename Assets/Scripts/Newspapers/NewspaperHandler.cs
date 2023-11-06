@@ -12,22 +12,21 @@ public class NewspaperHandler : MonoBehaviour
         rb.velocity = new Vector3(throwVectorX, speed, 0); 
     }
 
-
     private void OnTriggerEnter(Collider other) {
 
-        Destroy(this.gameObject, 2f); 
+        Destroy(this.gameObject, 3f); 
 
         if (other.gameObject.layer == 10) // If it's a window
         {
-            rb.velocity = new Vector3(0, 0, 0);
+            SuccessThrowReflectVelocity(other);
         }
         else // If it's any other object
         {
-            ReflectVelocity();
+            FailedThrowReflectVelocity();
         }
     }
 
-    private void ReflectVelocity()
+    private void FailedThrowReflectVelocity()
     {
         Vector3 presumedNormal = Vector3.right;
 
@@ -38,5 +37,17 @@ public class NewspaperHandler : MonoBehaviour
 
         Vector3 reflection = Vector3.Reflect(rb.velocity, presumedNormal);
         rb.velocity = new Vector3(Mathf.Abs(reflection.x)/2, reflection.y/2, 0);
+    }
+
+    private void SuccessThrowReflectVelocity(Collider other){
+        rb.velocity = new Vector3(-1f, 0, 0);
+        if (other.gameObject.GetComponentInParent<HouseHandler>().IsAvailable)
+        {
+            UIManager.Instance.AddScore(20);
+        }
+        else
+        {
+            UIManager.Instance.AddScore(10);
+        }
     }
 }

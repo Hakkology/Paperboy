@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Manager : MonoBehaviour
     public ObstacleManager obstacleManager;
     public AnimationManager animationManager;
     public NewspaperManager newspaperManager;
+    private UIManager uiManager;
 
     [Header("Biker Manager Objects")]
     public Transform bikerTransform;
@@ -26,12 +29,6 @@ public class Manager : MonoBehaviour
     public GameObject roadLine2;
     public List<GameObject> houseTypes;
     public List<Transform> houseLocations;
-    // public Transform leftFirstHouse;
-    // public Transform rightFirstHouse;
-    // public Transform leftFirstInterHouse;
-    // public Transform rightFirstInterHouse;
-    // public Transform leftLastInterHouse;
-    // public Transform rightLastInterHouse;
 
     [Header("Tree Manager Objects")]
     public List<GameObject> trees;
@@ -53,6 +50,9 @@ public class Manager : MonoBehaviour
     [Header("Newspaper Mechanics")]
     public GameObject newspaperPrefab; 
     public Transform newspaperThrowPoint;
+    [Header("UI Objects")]
+    public List<Image> heartImages; 
+    public TextMeshProUGUI scoreText;
 
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
@@ -63,6 +63,8 @@ public class Manager : MonoBehaviour
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
         carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);
         newspaperManager = new NewspaperManager(newspaperPrefab, newspaperThrowPoint, bikerManager.speed);
+
+        UIManager.Initialize(scoreText, heartImages);
     }
 
     void Start(){

@@ -7,7 +7,7 @@ public class NewspaperManager
     private float bikerspeed;
     private float lastThrowTime;
     [SerializeField]
-    private const float throwCooldown = 0.2f; 
+    private const float throwCooldown = 0.4f; 
 
     public NewspaperManager(GameObject newspaperPrefab, Transform bikerHandTransform, float bikerspeed)
     {
