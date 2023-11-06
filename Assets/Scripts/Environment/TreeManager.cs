@@ -28,6 +28,7 @@ public class TreeManager
             totalLeftSpawnDistance += spawnDistance;
             GameObject newTree = UnityEngine.Object.Instantiate(trees[treeIndex], new Vector3(firstLeftSpawnPosition.x, firstLeftSpawnPosition.y, firstLeftSpawnPosition.z + totalLeftSpawnDistance), Quaternion.identity);
             newTree.transform.SetParent(treeSpawnLocations[0].transform.parent);
+            
             if (totalLeftSpawnDistance > 280)
             {
                 break;
@@ -44,6 +45,22 @@ public class TreeManager
             totalRightSpawnDistance += spawnDistance;
             GameObject newTree = UnityEngine.Object.Instantiate(trees[treeIndex], new Vector3(firstRightSpawnPosition.x, firstRightSpawnPosition.y, firstRightSpawnPosition.z + totalRightSpawnDistance), Quaternion.identity);
             newTree.transform.SetParent(treeSpawnLocations[0].transform.parent);
+            if (totalRightSpawnDistance > 280)
+            {
+                break;
+            }
+        }
+
+        Vector3 VisualLeftSpawnPosition = treeSpawnLocations[6].transform.position;
+        int totalVisualLeftSpawnDistance = 0;
+
+        for (int i = 1; i < 107; i++)
+        {
+            int treeIndex = Random.Range(0, trees.Count);
+            int spawnDistance = Random.Range(9,25);
+            totalVisualLeftSpawnDistance += spawnDistance;
+            GameObject newTree = UnityEngine.Object.Instantiate(trees[treeIndex], new Vector3(VisualLeftSpawnPosition.x, VisualLeftSpawnPosition.y, VisualLeftSpawnPosition.z + totalRightSpawnDistance), Quaternion.identity);
+            newTree.transform.SetParent(treeSpawnLocations[6].transform.parent);
             if (totalRightSpawnDistance > 280)
             {
                 break;

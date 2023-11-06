@@ -34,7 +34,7 @@ public class BikerManager
 
     public void CameraMovement(){
         Vector3 newPosition = cameraTransform.position;
-        newPosition.z = bikerTransform.position.z;
+        newPosition.z = bikerTransform.position.z-4;
         cameraTransform.position = newPosition;
     }
 

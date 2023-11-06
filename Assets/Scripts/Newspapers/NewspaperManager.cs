@@ -38,7 +38,6 @@ public class NewspaperManager
             newspapersObj.transform.SetParent(newspapersParent);
         }
 
-        // Instantiate and initialize the newspaper
         GameObject newspaperInstance = GameObject.Instantiate(newspaperPrefab, bikerHandTransform.position, Quaternion.identity);
         newspaperInstance.transform.SetParent(newspapersParent);
         NewspaperHandler handler = newspaperInstance.GetComponent<NewspaperHandler>();
