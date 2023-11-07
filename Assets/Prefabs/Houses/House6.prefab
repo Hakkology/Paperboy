@@ -38,6 +38,7 @@ Transform:
   - {fileID: 7285635237630870159}
   - {fileID: 7550264945478865691}
   - {fileID: 2114600019160743461}
+  - {fileID: 7338454491794534676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3300000
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea7b47d2951ba74691bf4c4db10fefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAvailable: 0
 --- !u!1 &765484581726087584
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ GameObject:
   - component: {fileID: 6091309167222083890}
   - component: {fileID: 4544967058431563241}
   - component: {fileID: 601327630528043955}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrassRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +233,7 @@ GameObject:
   - component: {fileID: 1823503698454118603}
   - component: {fileID: 1739444007550629162}
   - component: {fileID: 760838083093577206}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,6 +445,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: -6.5, y: -1.5, z: 4.6}
+--- !u!1 &5444465993353093020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7338454491794534676}
+  - component: {fileID: 7026967387466166844}
+  m_Layer: 11
+  m_Name: DoorColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7338454491794534676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444465993353093020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 400000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7026967387466166844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5444465993353093020}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 3, z: 1}
+  m_Center: {x: -4.35, y: -1.5, z: 4.6}
 --- !u!1 &5565005925481633590
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +510,7 @@ GameObject:
   - component: {fileID: 1389834450590840105}
   - component: {fileID: 2423486057734615069}
   - component: {fileID: 7713875096733542578}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GrassLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +614,6 @@ GameObject:
   - component: {fileID: 2114600019160743461}
   - component: {fileID: 572742222391168902}
   - component: {fileID: 7527294304262541581}
-  - component: {fileID: 6707250085973245050}
   m_Layer: 10
   m_Name: WindowColliders
   m_TagString: Untagged
@@ -624,27 +678,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 3, z: 1}
   m_Center: {x: 0.9, y: -1.5, z: 4.6}
---- !u!65 &6707250085973245050
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9083347203657657758}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.75, y: 3, z: 1}
-  m_Center: {x: -4.35, y: -1.5, z: 4.6}
 --- !u!1001 &7280886441665129545
 PrefabInstance:
   m_ObjectHideFlags: 0

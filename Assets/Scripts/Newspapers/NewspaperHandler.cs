@@ -10,19 +10,29 @@ public class NewspaperHandler : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(throwVectorX, speed, 0); 
+        AudioManager.Instance.PlaySound("NewspaperHouse");
     }
 
     private void OnTriggerEnter(Collider other) {
 
         Destroy(this.gameObject, 3f); 
 
-        if (other.gameObject.layer == 10) // If it's a window
-        {
-            SuccessThrowReflectVelocity(other);
-        }
-        else // If it's any other object
-        {
-            FailedThrowReflectVelocity();
+        switch (other.gameObject.layer) {
+            case 10: // If it's a window
+                SuccessThrowReflectVelocity(other);
+                AudioManager.Instance.PlaySound("WindowBreaking");
+                break;
+            case 11: // If it's a door
+                SuccessThrowReflectVelocity(other);
+                AudioManager.Instance.PlaySound("NewspaperThrow");
+                break;
+            case 8: // If it's house components
+                FailedThrowReflectVelocity();
+                AudioManager.Instance.PlaySound("NewspaperThrow");
+                break;
+            default:
+                FailedThrowReflectVelocity();
+                break;
         }
     }
 

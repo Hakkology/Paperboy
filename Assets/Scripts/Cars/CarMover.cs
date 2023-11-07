@@ -50,14 +50,18 @@ public class CarMover
 
     private void CheckForTargetReached()
     {
-        if (Vector3.Distance(_transform.position, _currentTarget.point.position) < .5f)
+        if (Vector3.Distance(_transform.position, _currentTarget.point.position) < .1f)
         {
             if (_currentTarget.Equals(_path.rotationPoint))
             {
-                _transform.rotation = Quaternion.Euler(_currentTarget.rotation); 
+                Quaternion targetRotation = Quaternion.Euler(_currentTarget.rotation);
+                
+                Quaternion flatRotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
+                _transform.rotation = flatRotation;
+
                 _isRotating = false;
                 _speed = 10f;  
-                _currentTarget = _path.endPoint; 
+                _currentTarget = _path.endPoint;
             }
             else if (_currentTarget.Equals(_path.endPoint))
             {
@@ -66,20 +70,6 @@ public class CarMover
         }
     }
 
-    // private void PerformRotation()
-    // {
-
-    //     float rotationDuration = 1f; 
-    //     Quaternion targetRotation = Quaternion.Euler(_currentTarget.rotation);
-    //     _transform.rotation = Quaternion.RotateTowards(_transform.rotation, targetRotation, (90.0f / rotationDuration) * Time.deltaTime);
-
-    //     if (Mathf.Abs(Quaternion.Angle(_transform.rotation, targetRotation)) < 20.0f)
-    //     {
-    //         _transform.rotation = targetRotation;
-    //         _isRotating = false;
-    //         _speed = 10f;
-    //     }
-    // }
 
     private void DestroyCar()
     {

@@ -38,6 +38,7 @@ Transform:
   - {fileID: 7411860773767770618}
   - {fileID: 1899996331937444008}
   - {fileID: 376694239730275725}
+  - {fileID: 6172339015153208427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3300000
@@ -111,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cea7b47d2951ba74691bf4c4db10fefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAvailable: 0
 --- !u!1 &164845027860431582
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +125,7 @@ GameObject:
   - component: {fileID: 6743872250523365322}
   - component: {fileID: 5044999761463165505}
   - component: {fileID: 6080721270908132350}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Grassright
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +230,7 @@ GameObject:
   - component: {fileID: 8321401301872601752}
   - component: {fileID: 4462206057529996767}
   - component: {fileID: 5912193497037710938}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,6 +323,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Center: {x: 0.00000190735, y: 0, z: -0.000015258796}
+--- !u!1 &1755505230756577057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6172339015153208427}
+  - component: {fileID: 1495142564338535473}
+  m_Layer: 11
+  m_Name: DoorColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6172339015153208427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755505230756577057}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.93, y: -5, z: 2.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 400000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1495142564338535473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755505230756577057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4, y: 3, z: 1}
+  m_Center: {x: -8, y: 2, z: 1.3}
 --- !u!1 &1842987541397136168
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +595,7 @@ GameObject:
   - component: {fileID: 5387888352362445058}
   - component: {fileID: 7976239522936664978}
   - component: {fileID: 8561022584970028124}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Grassleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +701,6 @@ GameObject:
   - component: {fileID: 7919882812283029120}
   - component: {fileID: 1326937217204405965}
   - component: {fileID: 6843374247410889044}
-  - component: {fileID: 5474755553987255259}
   m_Layer: 10
   m_Name: Window Colliders
   m_TagString: Untagged
@@ -753,27 +807,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: -13.15, y: 2, z: 1.3}
---- !u!65 &5474755553987255259
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5682675740200833384}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.4, y: 3, z: 1}
-  m_Center: {x: -8, y: 2, z: 1.3}
 --- !u!1001 &7407604570050961212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -788,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1498189224980116, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4821364316237510, guid: 748077ed833c34102965ab1dad2a8817, type: 3}
       propertyPath: m_LocalScale.x

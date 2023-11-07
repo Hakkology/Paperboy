@@ -24,6 +24,7 @@ public class BikerManager
     public void onStart()
     {
         currentRotation = bikerTransform.localEulerAngles;
+        AudioManager.Instance.PlaySound("BikeRide");
     }
 
     public void onUpdate()

@@ -16,25 +16,22 @@ public class UIManager
         {
             if (instance == null)
             {
-                throw new System.Exception("UIManager has not been initialized.");
+                instance = new UIManager();
             }
             return instance;
         }
     }
 
-    public static void Initialize(TextMeshProUGUI scoreTextComponent, List<Image> heartImagesList)
+    private UIManager() {}
+
+    public void Initialize(TextMeshProUGUI scoreTextComponent, List<Image> heartImagesList)
     {
-        if (instance != null)
+        if (this.scoreText != null && this.heartImages != null)
         {
             Debug.LogWarning("UIManager is already initialized.");
             return;
         }
 
-        instance = new UIManager(scoreTextComponent, heartImagesList);
-    }
-
-    private UIManager(TextMeshProUGUI scoreTextComponent, List<Image> heartImagesList)
-    {
         this.scoreText = scoreTextComponent;
         this.heartImages = heartImagesList;
 

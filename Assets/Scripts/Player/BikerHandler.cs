@@ -33,6 +33,8 @@ public class BikerHandler : MonoBehaviour
         {
             Destroy(gameObject);
             UIManager.Instance.LoseLife();
+            AudioManager.Instance.PlaySound("BikeCrash");
+            AudioManager.Instance.StopSound("BikeRide");
         }
     }
 }

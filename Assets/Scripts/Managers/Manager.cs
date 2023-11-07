@@ -53,6 +53,9 @@ public class Manager : MonoBehaviour
     [Header("UI Objects")]
     public List<Image> heartImages; 
     public TextMeshProUGUI scoreText;
+    [Header("Sound Objects")]
+    public AudioData audioList; 
+    //public List<MusicData> musicList;
 
     void Awake() {
         bikerManager = new BikerManager(bikerTransform, cameraTransform);
@@ -61,10 +64,11 @@ public class Manager : MonoBehaviour
         environmentManager = new EnvironmentManager(roadLine, roadLine2, houseTypes, houseLocations);
         treeManager = new TreeManager(trees, treeSpawnLocations);
         obstacleManager = new ObstacleManager(obstaclePrefabs, obstacleSpawnPoints);
-        carSpawner = new CarSpawner(carPrefabs, carPathWaypoints);
+        carSpawner = new CarSpawner(carPrefabs, carPathWaypoints, bikerTransform);
         newspaperManager = new NewspaperManager(newspaperPrefab, newspaperThrowPoint, bikerManager.speed);
 
-        UIManager.Initialize(scoreText, heartImages);
+        UIManager.Instance.Initialize(scoreText, heartImages);
+        AudioManager.Instance.Initialize(audioList);
     }
 
     void Start(){
